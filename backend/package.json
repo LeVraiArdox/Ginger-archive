@@ -2,7 +2,7 @@
     "name": "backend",
     "version": "1.0.0",
     "description": "Backend for PDF archive",
-    "main": "app.js",
+    "main": "app.jsx",
     "scripts": {
         "start": "node app.js"
     },

@@ -38,11 +38,10 @@ function App() {
       if (!response.ok) {
         throw new Error(`Failed to delete file ${file}`);
       }
-      fetchFiles();  // Rafraîchir la liste des fichiers après la suppression
     } catch (error) {
       console.error('Error deleting file:', error);
     }
-
+    fetchFiles();
   }
 
   useEffect(() => {
