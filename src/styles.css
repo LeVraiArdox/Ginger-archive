@@ -27,10 +27,6 @@ body {
   display: inline-block; /* Affichage en ligne */
 }
 
-.file-upload input[type="file"] {
-  position: absolute; /* Position absolue pour le cacher */
-  opacity: 0; /* Opacité à zéro pour le cacher */
-}
 
 .upload-button {
   background-color: #4CAF50; /* Couleur de fond */
@@ -96,7 +92,8 @@ button:hover {
 }
 
 .file-item {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   margin: 10px;
   padding: 10px;
   border-radius: 8px;
@@ -107,4 +104,20 @@ button:hover {
 
 .file-item:hover {
   background-color: #e0e0e0;
+}
+
+.delete-button {
+  background-color: #f44336; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 5px 10px; /* Espacement intérieur */
+  font-size: 12px; /* Taille de police */
+  border: none; /* Supprimer la bordure */
+  border-radius: 5px; /* Bordures arrondies */
+  cursor: pointer; /* Curseur pointer */
+  margin-left: 10px; /* Marge à gauche */
+  transition: background-color 0.3s ease; /* Transition fluide pour le survol */
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Couleur de fond au survol */
 }

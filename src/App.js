@@ -29,15 +29,31 @@ function App() {
     window.open(`http://localhost:5000/${file}`, '_blank');
   };
 
+  const handleFileDeletion = (file) => {
+    // Supprimer le fichier du serveur
+    try {
+      const response = fetch(`http://localhost:5000/delete/${file}`, {
+        method: 'DELETE',
+      });
+      if (!response.ok) {
+        throw new Error(`Failed to delete file ${file}`);
+      }
+      fetchFiles();  // Rafraîchir la liste des fichiers après la suppression
+    } catch (error) {
+      console.error('Error deleting file:', error);
+    }
+
+  }
+
   useEffect(() => {
     fetchFiles();
   }, []);
 
   return (
     <div className="app">
-      <h1>PDF Archive</h1>
+      <h1>Ginger Archive</h1>
       <FileUpload onUpload={handleUpload} />
-      <FileList files={files} onFileClick={handleFileClick} />
+      <FileList files={files} onFileClick={handleFileClick} onDeleteClick={handleFileDeletion} />
     </div>
   );
 }

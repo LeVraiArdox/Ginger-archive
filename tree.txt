@@ -1,0 +1,15 @@
+C:\Users\adria\Documents\ginger_archive
+├── backend
+|  ├── app.js
+|  ├── package-lock.json
+|  ├── package.json
+|  └── uploads
+├── package-lock.json
+├── package.json
+├── public
+|  └── index.html
+└── src
+   ├── App.js
+   ├── components
+   ├── index.js
+   └── styles.css
