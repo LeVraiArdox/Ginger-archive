@@ -19,8 +19,32 @@ body {
   width: 100%;
 }
 
+/* App.css */
+
 .file-upload {
-  margin-bottom: 20px;
+  position: relative; /* Position relative pour permettre le positionnement absolu */
+  overflow: hidden; /* Cacher le dépassement */
+  display: inline-block; /* Affichage en ligne */
+}
+
+.file-upload input[type="file"] {
+  position: absolute; /* Position absolue pour le cacher */
+  opacity: 0; /* Opacité à zéro pour le cacher */
+}
+
+.upload-button {
+  background-color: #4CAF50; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement intérieur */
+  font-size: 16px; /* Taille de police */
+  border: none; /* Supprimer la bordure */
+  border-radius: 5px; /* Bordures arrondies */
+  cursor: pointer; /* Curseur pointer */
+  transition: background-color 0.3s ease; /* Transition fluide pour le survol */
+}
+
+.upload-button:hover {
+  background-color: #45a049; /* Couleur de fond au survol */
 }
 
 .file-list {
@@ -63,4 +87,24 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+.file-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-item {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-item:hover {
+  background-color: #e0e0e0;
 }
