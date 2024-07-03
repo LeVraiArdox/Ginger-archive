@@ -49,10 +49,14 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <h1>Ginger Archive</h1>
-      <FileUpload onUpload={handleUpload} />
-      <FileList files={files} onFileClick={handleFileClick} onDeleteClick={handleFileDeletion} />
+    <div>
+      <div className="app">
+        <h1>Ginger Archive</h1>
+        <FileUpload onUpload={handleUpload} />
+      </div>
+      <div className="app2">
+        <FileList files={files} onFileClick={handleFileClick} onDeleteClick={handleFileDeletion} />
+      </div>
     </div>
   );
 }

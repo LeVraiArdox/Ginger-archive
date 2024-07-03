@@ -7,6 +7,8 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
+  background-image: url("./assets/roux.png");
+  backdrop-filter: blur(5px);
 }
 
 .app {
@@ -17,6 +19,19 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   width: 100%;
+}
+
+.app2 {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin-top: 20px;
+  max-height: 400px;
+  padding: 20px;
 }
 
 /* App.css */
@@ -79,6 +94,8 @@ body {
 
 .file-list {
   margin-bottom: 20px;
+  overflow-y: scroll;
+  max-height: 400px;
 }
 
 .file-list ul {
