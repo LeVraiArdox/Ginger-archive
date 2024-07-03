@@ -39,6 +39,7 @@ function FileUpload({ onUpload }) {
 
   return (
     <div className="file-upload">
+      {!selectedFile && "Upload"}
       <input type="file" onChange={handleFileChange} />
       {selectedFile && (
         <div>
