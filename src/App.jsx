@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import FileUpload from './components/FileUpload';
 import FileList from './components/FileList';
+import SearchBar from './components/SearchBar';
 
 function App() {
   const [files, setFiles] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const fetchFiles = async () => {
     try {
@@ -42,20 +44,25 @@ function App() {
       console.error('Error deleting file:', error);
     }
     fetchFiles();
-  }
+  };
 
   useEffect(() => {
     fetchFiles();
   }, []);
+
+  const filteredFiles = files.filter(file =>
+    file.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
       <div className="app">
         <h1>Ginger Archive</h1>
         <FileUpload onUpload={handleUpload} />
+        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
       </div>
       <div className="app2">
-        <FileList files={files} onFileClick={handleFileClick} onDeleteClick={handleFileDeletion} />
+        <FileList files={filteredFiles} onFileClick={handleFileClick} onDeleteClick={handleFileDeletion} />
       </div>
     </div>
   );
