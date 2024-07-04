@@ -46,7 +46,7 @@ function FileUpload({ onUpload }) {
     </div>
     {selectedFile && (
         <div>
-          <p>Selected file: {selectedFile.name}</p>
+          <p>Fichier choisi: {selectedFile.name}</p>
           <button onClick={handleUpload}>Confirmer</button>
         </div>
       )}

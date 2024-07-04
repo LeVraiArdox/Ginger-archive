@@ -6,14 +6,14 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
-  background-image: url("./assets/roux.png");
+  /*background-image: url("./assets/roux.png");*/
+  background: linear-gradient(45deg, #134074, #0b2545);
   backdrop-filter: blur(5px);
 }
 
 .app {
   text-align: center;
-  background-color: white;
+  background-color: #eef4ed;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -23,7 +23,7 @@ body {
 
 .app2 {
   text-align: center;
-  background-color: white;
+  background-color: #eef4ed;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -41,8 +41,8 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  background-color: #307750;
-  color: #fff;
+  background-color: #8da9c4;
+  color: #eef4ed;
   border-style: none;
   padding: 1em 2em;
   border-radius: 0.5em;
@@ -67,7 +67,7 @@ body {
   height: 100%;
   width: 0;
   border-radius: 0.5em;
-  background-color: #469b61;
+  background-color: #b4cbe0;
   z-index: -1;
   transition: all 350ms;
 }
@@ -78,7 +78,7 @@ body {
 
 
 .upload-button {
-  background-color: #4CAF50; /* Couleur de fond */
+  background-color: #8da9c4; /* Couleur de fond */
   color: white; /* Couleur du texte */
   padding: 10px 20px; /* Espacement intérieur */
   font-size: 16px; /* Taille de police */
@@ -88,9 +88,6 @@ body {
   transition: background-color 0.3s ease; /* Transition fluide pour le survol */
 }
 
-.upload-button:hover {
-  background-color: #45a049; /* Couleur de fond au survol */
-}
 .file-list {
   margin-bottom: 20px;
   overflow-y: scroll;
@@ -118,13 +115,8 @@ body {
   flex-direction: column;
 }
 
-.pdf-viewer {
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-}
-
 button {
-  background-color: #4CAF50;
+  background-color: #8da9c4;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -138,7 +130,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #798fa3;
 }
 
 .file-item-container {
@@ -148,7 +140,7 @@ button:hover {
   margin: 10px;
   padding: 10px;
   border-radius: 8px;
-  background-color: #f0f0f0;
+  background-color: #bfd4e7;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -183,7 +175,7 @@ button:hover {
   padding-left: 0.8em;
   outline: none;
   overflow: hidden;
-  background-color: #F3F3F3;
+  background-color: #eef4ed;
   border-radius: 10px;
   transition: all 0.5s;
 }
@@ -193,4 +185,57 @@ button:hover {
   border: 2px solid #4A9DEC;
   box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
   background-color: white;
+}
+
+.about-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.about-button:hover {
+  background-color: #0056b3;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-button:hover {
+  background-color: #c82333;
 }

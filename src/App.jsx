@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import FileUpload from './components/FileUpload';
 import FileList from './components/FileList';
 import SearchBar from './components/SearchBar';
+import AboutModal from './components/AboutModal';
 
 function App() {
   const [files, setFiles] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   const fetchFiles = async () => {
     try {
@@ -64,6 +66,8 @@ function App() {
       <div className="app2">
         <FileList files={filteredFiles} onFileClick={handleFileClick} onDeleteClick={handleFileDeletion} />
       </div>
+      <button className="about-button" onClick={() => setIsAboutOpen(true)}>A propos</button>
+      <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
     </div>
   );
 }
