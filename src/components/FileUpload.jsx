@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
+
+const notify_success = (text) => toast.success(text);
 
 function FileUpload({ onUpload }) {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -47,7 +50,7 @@ function FileUpload({ onUpload }) {
     {selectedFile && (
         <div>
           <p>Fichier choisi: {selectedFile.name}</p>
-          <button onClick={handleUpload}>Confirmer</button>
+          <button onClick={() => {handleUpload(); notify_success("Fichier importé")}}>Confirmer</button>
         </div>
       )}
     </div>
